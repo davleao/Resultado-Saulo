@@ -1,0 +1,6 @@
+{
+  "name": "Dashboard Financeiro do Lançamento",
+  "description": "Visualização executiva e lúdica dos resultados financeiros do lançamento do curso: divisão entre Saulo (Expert), ZYON e CAJO.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
