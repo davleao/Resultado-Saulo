@@ -58,11 +58,11 @@ export const RoasTab: React.FC = () => {
       name: '3º Lançamento',
       shortName: 'L3 (Set)',
       roasBruto: 1.44,
-      roasLiquido: 1.49,
+      roasLiquido: 1.35,
       trafego: 7054.89,
-      faturamentoLiquido: 10494.62,
-      lucro: -171.27,
-      lucroPorRealTrafego: -0.02,
+      faturamentoLiquido: 9503.18,
+      lucro: 1876.29,
+      lucroPorRealTrafego: 0.27,
     },
     {
       name: 'Consolidado Geral',
@@ -190,14 +190,14 @@ export const RoasTab: React.FC = () => {
             <span className="text-xs font-bold px-2.5 py-0.5 rounded-full bg-neutral-800 text-neutral-300 border border-neutral-700">
               3º Lançamento (Set)
             </span>
-            <span className="text-[11px] text-amber-400 font-semibold flex items-center gap-1">
-              <AlertTriangle className="w-3.5 h-3.5" /> Atenção
+            <span className="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
+              <CheckCircle2 className="w-3.5 h-3.5" /> Lucrativo (+19,7%)
             </span>
           </div>
 
           <div className="mb-4">
             <div className="flex items-baseline gap-2">
-              <span className="text-3xl font-extrabold font-mono-num text-white">1.49x</span>
+              <span className="text-3xl font-extrabold font-mono-num text-white">1.35x</span>
               <span className="text-xs text-neutral-400 font-medium">ROAS Líquido</span>
             </div>
             <span className="text-xs text-neutral-400 block mt-0.5">ROAS Bruto: <strong>1.44x</strong></span>
@@ -210,11 +210,11 @@ export const RoasTab: React.FC = () => {
             </div>
             <div className="flex justify-between">
               <span className="text-neutral-400">Faturamento Líquido:</span>
-              <span className="font-mono-num text-emerald-400">{formatBRL(10494.62)}</span>
+              <span className="font-mono-num text-emerald-400">{formatBRL(9503.18)}</span>
             </div>
             <div className="flex justify-between pt-1 border-t border-[#1a1a24] font-semibold">
               <span className="text-white">Lucro por R$ 1 de Tráfego:</span>
-              <span className="font-mono-num text-rose-400">- R$ 0,02</span>
+              <span className="font-mono-num text-emerald-400">+ R$ 0,27</span>
             </div>
           </div>
         </div>
@@ -415,9 +415,9 @@ export const RoasTab: React.FC = () => {
               </div>
 
               <div className="p-3 rounded-xl bg-[#161622] border border-[#222232]">
-                <strong className="text-white block mb-1">O que aconteceu no 3º Lançamento (ROAS 1.49x)?</strong>
+                <strong className="text-white block mb-1">O que aconteceu no 3º Lançamento (ROAS 1.35x)?</strong>
                 <p className="text-neutral-400">
-                  O investimento em tráfego subiu bruscamente de R$ 4,1k para R$ 7,0k (+70% de verba). Ao forçar a escala em público frio sem esteira de aquecimento mais longa, o custo por aquisição (CAC) aumentou e a conversão caiu.
+                  O investimento em tráfego subiu para R$ 7.054,89 (+70% de verba). Mesmo com o CAC mais elevado, o lançamento gerou <strong>R$ 9.503,18</strong> de faturamento líquido e <strong>R$ 1.876,29 de lucro líquido real</strong> (+R$ 938,14 limpo para o Saulo e +R$ 469,07 para cada agência).
                 </p>
               </div>
 

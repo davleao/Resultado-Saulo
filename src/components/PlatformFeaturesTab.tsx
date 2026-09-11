@@ -130,7 +130,12 @@ export const PlatformFeaturesTab: React.FC = () => {
 *RESULTADO POR LANÇAMENTO:*
 • 1º Lançamento (Fev): R$ 8.499,77 lucro (ROAS 4.69x)
 • 2º Lançamento (Jun): R$ 10.297,48 lucro (ROAS 3.73x)
-• 3º Lançamento (Set): -R$ 171,27 (Impacto anuidade Hotmart Pages R$ 2.268)
+• 3º Lançamento (Set): +R$ 1.876,29 lucro (ROAS 1.35x - R$ 9.503,18 entradas vs R$ 7.626,89 custos)
+• Subtotal dos 3 Lançamentos: R$ 20.673,54 de lucro operacional
+
+*INFRAESTRUTURA ANUAL & ENTRESSAFRA:*
+• Hotmart Pages Anual da CAJO & ActiveCampaign (Out-Dez): -R$ 2.047,56
+• Lucro Líquido Final da Sociedade: R$ 18.626,02
 
 *RECONCILIAÇÃO HOTMART PAGES:*
 • A CAJO adiantou R$ 2.268,00 no cartão.
@@ -412,16 +417,30 @@ DISTRIBUIÇÃO DE LUCROS AOS SÓCIOS:
                   </tr>
                   <tr className="hover:bg-[#161622]">
                     <td className="py-3 font-sans font-bold text-white">3º Lançamento (Set/26)</td>
-                    <td className="py-3 text-right text-emerald-400 font-semibold">{formatBRL(10494.62)}</td>
+                    <td className="py-3 text-right text-emerald-400 font-semibold">{formatBRL(9503.18)}</td>
                     <td className="py-3 text-right text-rose-400">{formatBRL(7054.89)}</td>
-                    <td className="py-3 text-right text-neutral-300">{formatBRL(3611.00)}</td>
-                    <td className="py-3 text-right text-rose-400 font-semibold">{formatBRL(10665.89)}</td>
-                    <td className="py-3 text-right text-rose-400 font-bold">{formatBRL(-171.27)}</td>
-                    <td className="py-3 text-right text-rose-400 font-bold">{formatBRL(-85.64)}</td>
-                    <td className="py-3 text-right text-rose-400 font-bold">{formatBRL(-42.81)}</td>
-                    <td className="py-3 text-right text-rose-400 font-bold">{formatBRL(-42.81)}</td>
+                    <td className="py-3 text-right text-neutral-300">{formatBRL(572.00)}</td>
+                    <td className="py-3 text-right text-rose-400 font-semibold">{formatBRL(7626.89)}</td>
+                    <td className="py-3 text-right text-emerald-400 font-bold">{formatBRL(1876.29)}</td>
+                    <td className="py-3 text-right text-orange-400 font-bold">{formatBRL(938.14)}</td>
+                    <td className="py-3 text-right text-sky-400 font-bold">{formatBRL(469.07)}</td>
+                    <td className="py-3 text-right text-purple-400 font-bold">{formatBRL(469.07)}</td>
                     <td className="py-3 text-center">
                       <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-400">Exato</span>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-[#161622] bg-[#14141c]/50">
+                    <td className="py-3 font-sans text-neutral-300">Infra Anual & Entressafra (Out-Dez)</td>
+                    <td className="py-3 text-right text-emerald-400/80">{formatBRL(991.44)}</td>
+                    <td className="py-3 text-right text-neutral-400">{formatBRL(0)}</td>
+                    <td className="py-3 text-right text-rose-400">{formatBRL(3039.00)}</td>
+                    <td className="py-3 text-right text-rose-400 font-semibold">{formatBRL(3039.00)}</td>
+                    <td className="py-3 text-right text-rose-400 font-bold">{formatBRL(-2047.56)}</td>
+                    <td className="py-3 text-right text-rose-400 font-bold">{formatBRL(-1023.78)}</td>
+                    <td className="py-3 text-right text-rose-400 font-bold">{formatBRL(-511.89)}</td>
+                    <td className="py-3 text-right text-rose-400 font-bold">{formatBRL(-511.89)}</td>
+                    <td className="py-3 text-center">
+                      <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-purple-500/20 text-purple-300">Hotmart Pages</span>
                     </td>
                   </tr>
                 </tbody>

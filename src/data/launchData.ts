@@ -256,33 +256,50 @@ export const LAUNCH_CYCLES: LaunchCycleSummary[] = [
     name: '3º Lançamento',
     shortName: 'L3',
     season: 'Turma de Setembro',
-    period: 'Setembro a Dezembro 2026',
+    period: 'Setembro 2026',
     peakMonth: 'Setembro/26',
     faturamentoBruto: 10131.42,
-    faturamentoLiquido: 10494.62,
-    taxasPlataforma: -363.20, // recebimentos de parcelas acumuladas
+    faturamentoLiquido: 9503.18,
+    taxasPlataforma: 628.24,
     investimentoTrafego: 7054.89,
-    custosOperacionais: 3611.00,
-    custoTotal: 10665.89,
-    lucroPeriodo: -171.27,
-    margemLucro: -1.63,
+    custosOperacionais: 572.00,
+    custoTotal: 7626.89,
+    lucroPeriodo: 1876.29,
+    margemLucro: 19.74,
     roasBruto: 1.44,
-    roasLiquido: 1.49,
-    roi: -1.61,
+    roasLiquido: 1.35,
+    roi: 24.60,
     splitSocios: {
-      saulo: { receitas: 5247.31, despesas: 5332.95, lucro: -85.64, porcentagem: 50 },
-      zyon:  { receitas: 2623.66, despesas: 2666.47, lucro: -42.81, porcentagem: 25 },
-      cajo:  { receitas: 2623.66, despesas: 2666.47, lucro: -42.81, porcentagem: 25 },
+      saulo: { receitas: 4751.59, despesas: 3813.45, lucro: 938.14, porcentagem: 50 },
+      zyon:  { receitas: 2375.80, despesas: 1906.72, lucro: 469.07, porcentagem: 25 },
+      cajo:  { receitas: 2375.80, despesas: 1906.72, lucro: 469.07, porcentagem: 25 },
     },
     custosDetalhados: [
-      { item: 'Tráfego Pago (Meta Ads acelerado)', categoria: 'Mídia Paga', valorTotal: 7054.89, valorSaulo: 3527.45, valorAgencias: 1763.72, detalhe: 'Aumento agressivo de verba para escalar (custo por lead subiu)' },
-      { item: 'Hotmart Pages Anual (LP & Hospedagem)', categoria: 'Páginas / LP', valorTotal: 2268.00, valorSaulo: 1134.00, valorAgencias: 567.00, detalhe: 'Anuidade integral contratada pela CAJO, rateada em Outubro' },
-      { item: 'ActiveCampaign (Set, Out, Nov, Dez)', categoria: 'E-mail Mkt', valorTotal: 1028.00, valorSaulo: 514.00, valorAgencias: 257.00, detalhe: '4 mensalidades x R$ 257,00 cobrindo até o encerramento do ano' },
+      { item: 'Tráfego Pago (Meta Ads)', categoria: 'Mídia Paga', valorTotal: 7054.89, valorSaulo: 3527.45, valorAgencias: 1763.72, detalhe: 'Investimento forte em anúncios para captação de leads e remarketing' },
       { item: 'Manychat (Set)', categoria: 'Instagram Direct', valorTotal: 315.00, valorSaulo: 157.50, valorAgencias: 78.75, detalhe: 'Upgrade de plano para automações pesadas no mês do lançamento' },
+      { item: 'ActiveCampaign (Setembro)', categoria: 'E-mail Mkt', valorTotal: 257.00, valorSaulo: 128.50, valorAgencias: 64.25, detalhe: 'Mensalidade da ferramenta de e-mail marketing no mês do lançamento' },
     ],
-    destaque: 'Sofreu com o impacto de custos anuais (Hotmart Pages R$ 2.268) e menor conversão de tráfego (ROAS 1.49x).',
+    destaque: 'Gerou R$ 9.503,18 líquidos com custos de R$ 7.626,89, entregando +R$ 1.876,29 de lucro líquido real (+R$ 938,14 no bolso do Saulo e +R$ 469,07 para cada agência).',
   },
 ];
+
+// Entressafra e Infraestrutura Anual (Hotmart Pages + Out/Nov/Dez):
+export const ENTRESSAFRA_AND_ANNUAL_INFRA = {
+  descricao: 'Custos Estruturais Anuais e Entressafra (Outubro a Dezembro)',
+  periodo: 'Outubro a Dezembro 2026',
+  receitasParcelamento: 991.44, // Out (619.76) + Nov (185.84) + Dez (185.84)
+  custosTotais: 3039.00, // Hotmart Pages (2.268,00) + ActiveCampaign 3 meses (771,00)
+  saldoEntressafra: -2047.56,
+  hotmartPagesAnual: 2268.00,
+  activeCampaignEntressafra: 771.00,
+  splitSocios: {
+    saulo: { receitas: 495.72, despesas: 1519.50, saldo: -1023.78, porcentagem: 50 },
+    zyon:  { receitas: 247.86, despesas: 759.75, saldo: -511.89, porcentagem: 25 },
+    cajo:  { receitas: 247.86, despesas: 759.75, saldo: -511.89, porcentagem: 25 },
+  },
+  somaLucro3Lancamentos: 20673.54, // 8499.77 + 10297.48 + 1876.29
+  lucroFinalConsolidado: 18626.02, // 20673.54 - 2047.56
+};
 
 // Grand Totals:
 export const GRAND_TOTALS = {

@@ -21,6 +21,7 @@ import {
 import { 
   LAUNCH_CYCLES, 
   GRAND_TOTALS, 
+  ENTRESSAFRA_AND_ANNUAL_INFRA,
   formatBRL, 
   formatPercent 
 } from '../data/launchData';
@@ -274,6 +275,107 @@ export const LaunchesTab: React.FC = () => {
                   <Bar dataKey="lucroPeriodo" name="Lucro Líquido" fill="#f97316" radius={[4, 4, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
+            </div>
+          </div>
+
+          {/* Consolidation: Launches vs Annual Infrastructure */}
+          <div className="p-6 lg:p-8 rounded-2xl bg-[#111116] border border-[#2a2a3e] relative overflow-hidden">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
+              <div>
+                <div className="flex items-center gap-2">
+                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
+                  <h4 className="text-base font-bold text-white tracking-tight">
+                    Conciliação Contábil: Os 3 Lançamentos + Custos Estruturais Anuais
+                  </h4>
+                </div>
+                <p className="text-xs text-neutral-400 mt-0.5">
+                  Entenda exatamente por que os 3 lançamentos foram 100% lucrativos e como os custos anuais de infraestrutura (Hotmart Pages da CAJO) fecham a conta anual da sociedade
+                </p>
+              </div>
+              <span className="text-xs font-bold px-3 py-1 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                100% Auditado
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-6">
+              {/* Box 1: Lucro dos 3 Lançamentos */}
+              <div className="p-5 rounded-xl bg-[#161622] border border-emerald-500/30">
+                <span className="text-[11px] font-bold text-neutral-400 uppercase tracking-wider block mb-1">
+                  Lucro Direto dos 3 Lançamentos
+                </span>
+                <span className="text-2xl font-bold font-mono-num text-emerald-400 block mb-2">
+                  + {formatBRL(ENTRESSAFRA_AND_ANNUAL_INFRA.somaLucro3Lancamentos)}
+                </span>
+                <div className="space-y-1 text-xs text-neutral-300">
+                  <div className="flex justify-between">
+                    <span className="text-neutral-400">1º Lançamento (Fev):</span>
+                    <span className="font-mono-num text-emerald-400 font-semibold">+ R$ 8.499,77</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-neutral-400">2º Lançamento (Jun):</span>
+                    <span className="font-mono-num text-emerald-400 font-semibold">+ R$ 10.297,48</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-neutral-400">3º Lançamento (Set):</span>
+                    <span className="font-mono-num text-emerald-400 font-semibold">+ R$ 1.876,29</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Box 2: Infraestrutura Anual & Entressafra */}
+              <div className="p-5 rounded-xl bg-[#161622] border border-rose-500/30">
+                <span className="text-[11px] font-bold text-neutral-400 uppercase tracking-wider block mb-1">
+                  Infraestrutura Anual & Entressafra
+                </span>
+                <span className="text-2xl font-bold font-mono-num text-rose-400 block mb-2">
+                  {formatBRL(ENTRESSAFRA_AND_ANNUAL_INFRA.saldoEntressafra)}
+                </span>
+                <div className="space-y-1 text-xs text-neutral-300">
+                  <div className="flex justify-between">
+                    <span className="text-neutral-400">Hotmart Pages Anual (CAJO):</span>
+                    <span className="font-mono-num text-rose-400 font-semibold">- R$ 2.268,00</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-neutral-400">ActiveCampaign (Out-Dez):</span>
+                    <span className="font-mono-num text-rose-400 font-semibold">- R$ 771,00</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-neutral-400">Entradas Parcelas (Out-Dez):</span>
+                    <span className="font-mono-num text-emerald-400 font-semibold">+ R$ 991,44</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Box 3: Lucro Líquido Final Consolidado */}
+              <div className="p-5 rounded-xl bg-[#181828] border border-orange-500/40">
+                <span className="text-[11px] font-bold text-neutral-400 uppercase tracking-wider block mb-1">
+                  Lucro Final Consolidado Anual
+                </span>
+                <span className="text-2xl font-bold font-mono-num text-white block mb-2">
+                  {formatBRL(GRAND_TOTALS.lucroLiquido)}
+                </span>
+                <div className="space-y-1 text-xs text-neutral-300">
+                  <div className="flex justify-between">
+                    <span className="text-orange-400 font-semibold">Saulo (50%):</span>
+                    <span className="font-mono-num text-emerald-400 font-bold">{formatBRL(GRAND_TOTALS.lucroLiquido * 0.5)}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-sky-400 font-semibold">ZYON (25%):</span>
+                    <span className="font-mono-num text-emerald-400 font-bold">{formatBRL(GRAND_TOTALS.lucroLiquido * 0.25)}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-purple-400 font-semibold">CAJO (25%):</span>
+                    <span className="font-mono-num text-emerald-400 font-bold">{formatBRL(GRAND_TOTALS.lucroLiquido * 0.25)}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-4 rounded-xl bg-[#0c0c12] border border-[#212130] flex items-start gap-3 text-xs text-neutral-300">
+              <Info className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" />
+              <p className="leading-relaxed">
+                <strong>Esclarecimento Societário:</strong> O 3º Lançamento (Setembro) gerou <strong className="text-emerald-400 font-semibold">R$ 9.503,18</strong> de faturamento líquido contra <strong className="text-rose-400 font-semibold">R$ 7.626,89</strong> de custos operacionais e tráfego, produzindo um lucro líquido positivo de <strong className="text-emerald-400 font-semibold">+ R$ 1.876,29</strong>. A anuidade do Hotmart Pages (R$ 2.268,00 adiantados pela CAJO) é uma ferramenta anual da estrutura da empresa e é compensada no balanço anual consolidado.
+              </p>
             </div>
           </div>
         </div>
